@@ -55,12 +55,14 @@ const Login = () => {
 
     setLoading(true);
     const result = await login(formData.email, formData.password);
+    console.log(result);
     setLoading(false);
   };
 
   const handleGoogleSuccess = async (credentialResponse) => {
     setLoading(true);
     const result = await googleLogin(credentialResponse);
+    console.log(result);
     setLoading(false);
   };
 
