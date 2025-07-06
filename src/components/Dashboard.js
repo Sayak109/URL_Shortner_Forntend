@@ -30,7 +30,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     fetchUrls();
-  }, []);
+  });
 
   const fetchUrls = async () => {
     try {
