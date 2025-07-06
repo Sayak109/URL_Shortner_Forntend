@@ -81,7 +81,6 @@ ehthumbs.db
 Thumbs.db
 
 # Temporary debugging and utility files
-src/components/TestConnection.js
 src/utils/debug-*.js
 src/utils/test-*.js
 

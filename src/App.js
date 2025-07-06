@@ -11,7 +11,6 @@ import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Dashboard from "./components/Dashboard";
-import TestConnection from "./components/TestConnection";
 import "./App.css";
 
 // Protected Route Component
@@ -79,7 +78,6 @@ function AppContent() {
               </ProtectedRoute>
             }
           />
-          <Route path="/test" element={<TestConnection />} />
           <Route path="/" element={<Navigate to="/login" />} />
         </Routes>
       </div>
