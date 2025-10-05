@@ -281,18 +281,15 @@ const Register = () => {
               </div>
             </div>
 
-            <div className="mt-6">
-              <GoogleLogin
-                onSuccess={handleGoogleSuccess}
-                onError={handleGoogleError}
-                useOneTap
-                theme="outline"
-                size="large"
-                text="signup_with"
-                shape="rectangular"
-                locale="en"
-                disabled={loading}
-              />
+            <div className="mt-6 flex flex-col space-y-3">
+              <a
+                href={`${
+                  process.env.REACT_APP_API_URL || "http://localhost:3322"
+                }${process.env.REACT_APP_API_SLUG || "/api/v1"}/auth/google`}
+                className="w-full inline-flex justify-center py-3 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              >
+                Continue with Google
+              </a>
             </div>
           </div>
 

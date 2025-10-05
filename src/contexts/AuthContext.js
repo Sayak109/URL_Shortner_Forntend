@@ -72,6 +72,8 @@ export const AuthProvider = ({ children }) => {
       const response = await authAPI.register({ name, email, password });
 
       if (response.data.code === 200) {
+        setUser(response.data.data);
+        setIsAuthenticated(true);
         toast.success("Registration successful! Please login.");
         return { success: true };
       } else {
